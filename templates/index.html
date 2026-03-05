@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Fraud Detection</title>
+</head>
+<body>
+  <h2>Insurance Fraud Detection Using ML</h2>
+
+  <form method="POST">
+    Age: <input type="number" name="age" step="1" required><br><br>
+    Policy Deductable: <input type="number" name="policy_deductable" required><br><br>
+    Policy Annual Premium: <input type="number" name="policy_annual_premium" step="0.01" required><br><br>
+    Umbrella Limit: <input type="number" name="umbrella_limit" required><br><br>
+    Capital Gains: <input type="number" name="capital_gains" required><br><br>
+    Capital Loss: <input type="number" name="capital_loss" required><br><br>
+    Incident Hour of the Day: <input type="number" name="incident_hour_of_the_day" required><br><br>
+    Vehicles Involved: <input type="number" name="number_of_vehicles_involved" required><br><br>
+    Bodily Injuries: <input type="number" name="bodily_injuries" required><br><br>
+    Witnesses: <input type="number" name="witnesses" required><br><br>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if prediction_text %}
+    <h3>Prediction: {{ prediction_text }}</h3>
+  {% endif %}
+</body>
+</html>
